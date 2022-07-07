@@ -42,6 +42,7 @@ double Distance (int xta, int yta, int zta,  int xtb, int ytb, int ztb)
     // cat2 = Math.Abs(ytb) - Math.Abs(yta);
     // cat3 = Math.Abs(ztb) - Math.Abs(zta);
     
+    
     // result = Math.Sqrt((Math.Abs(xta - xtb,2)) + (Math.Abs(yta - ytb,2)) + (Math.Abs(yta - ytb,2)));
     
     cat1 = Math.Pow(xta - xtb,2);
