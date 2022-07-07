@@ -32,19 +32,27 @@ int zb = Convert.ToInt32(Console.ReadLine());
 
 double Distance (int xta, int yta, int zta,  int xtb, int ytb, int ztb)
 {
-    int cat1 = 0;
-    int cat2 = 0;
-    int cat3 = 0;
+    // AB = √(xb - xa)2 + (yb - ya)2 + (zb - za)2
+    double cat1 = 0;
+    double cat2 = 0;
+    double cat3 = 0;
     double result = 0.0;
 
-    cat1 = Math.Abs(xta) - Math.Abs(xtb);
-    cat2 = Math.Abs(yta) - Math.Abs(ytb);
-    cat3 = Math.Abs(zta) - Math.Abs(ztb);
-    result = Math.Sqrt(cat1 * cat1 + cat2 * cat2 + cat3 * cat3);
-    return Math.Round(result, 3);
+    // cat1 = Math.Abs(xtb) - Math.Abs(xta);
+    // cat2 = Math.Abs(ytb) - Math.Abs(yta);
+    // cat3 = Math.Abs(ztb) - Math.Abs(zta);
+    
+    // result = Math.Sqrt((Math.Abs(xta - xtb,2)) + (Math.Abs(yta - ytb,2)) + (Math.Abs(yta - ytb,2)));
+    
+    cat1 = Math.Pow(xta - xtb,2);
+    cat2 = Math.Pow(yta - ytb,2);
+    cat3 = Math.Pow(zta - ztb,2);
+    result = Math.Sqrt(cat1 + cat2 + cat3);
+    
+    return Math.Round(result, 2);
 }
 
-double result = Distance(xa, ya, za, xb, yb, zb);
-Console.WriteLine($"Растояние между точками А и В: {result}");
+double resulttwo = Distance(xa, ya, za, xb, yb, zb);
+Console.WriteLine($"Растояние между точками А и В: {resulttwo}");
 
 
