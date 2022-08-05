@@ -2,7 +2,6 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-Console.Clear();
 Console.WriteLine($"Это программа, которая найдёт сумму натуральных элементов в промежутке от M до N");
 int m = InputNumbers("Введите M: ");
 int n = InputNumbers("Введите N: ");
